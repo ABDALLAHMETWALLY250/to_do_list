@@ -4,7 +4,8 @@ let tasks = [
     date: "29/7/2023",
   },
 ];
-tasks = JSON.parse(localStorage.getItem("myTask"));
+let retrive = JSON.parse(localStorage.getItem("myTask"));
+tasks = retrive ?? [];
 // Add New Task
 function fillTask() {
   document.getElementById("tasks").innerHTML = "";
